@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<dictionaries>
+  <comment>Local File dictionary with airpush device_network_generation list details</comment>
+  <dictionary>
+    <name>dict1</name>
+    <source>
+      <mysql>
+        <port>3306</port>
+        <user>sqlUser</user>
+        <password>password</password>
+        <replica>
+          <host>192.168.1.1</host>
+          <priority>1</priority>
+        </replica>
+        <replica>
+          <host>192.168.1.2</host>
+          <priority>2</priority>
+        </replica>
+        <db>dataBase</db>
+        <table>tableName</table>
+      </mysql>
+    </source>
+    <layout>
+      <hashed/>
+    </layout>
+    <structure>
+      <id>
+        <name>browser_id</name>
+        <type>UInt64</type>
+      </id>
+      <attribute>
+        <name>tmp</name>
+        <type>String</type>
+        <null_value></null_value>
+      </attribute>
+      <attribute>
+        <name>tmk</name>
+        <type>UInt16</type>
+        <null_value>0</null_value>
+      </attribute>
+      <attribute>
+        <name>tmc</name>
+        <type>DateTime</type>
+        <null_value>0000-00-00 00:00:00</null_value>
+      </attribute>
+    </structure>
+    <lifetime>
+      <min>600</min>
+      <max>900</max>
+    </lifetime>
+  </dictionary>
+</dictionaries>

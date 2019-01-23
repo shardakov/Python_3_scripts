@@ -1,0 +1,48 @@
+dict1:
+  source: "sql"
+  file_path: ''
+  file_format: ''
+  sql_port: 3306
+  sql_user: 'sqlUser'
+  sql_password: "password"
+  replica:
+    repl1:
+      host: '192.168.1.1'
+      priority: 1
+    repl2:
+      host: '192.168.1.2'
+      priority: 2
+  db: 'dataBase'
+  table: 'tableName'
+  layout: "hashed"
+  attribute:
+    name1: 
+      name: "tmp"
+      type: "String"
+      null_value: ''
+    name2: 
+      name: "tmk"
+      type: "UInt16"
+      null_value: '0'
+    name3: 
+      name: "tmc"
+      type: "DateTime"
+      null_value: '0000-00-00 00:00:00'
+  lifetime_min: 600
+  lifetime_max: 900
+
+dict2:
+  source: "file"
+  file_path: '/etc/file'
+  file_format: 'CSV'
+  sql_port: ''
+  sql_user: ''
+  sql_password: ''
+  layout: "flat"
+  attribute:
+    name:
+      name: "name"
+      type: "String"
+      null_value: ''
+  lifetime_min: 660
+  lifetime_max: 900
