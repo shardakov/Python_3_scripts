@@ -43,7 +43,7 @@ class TestClass(object):
         doc.appendChild(dictionaries)
 
         comment = doc.createElement('comment')
-        text = doc.createTextNode('Local File dictionary with airpush device_network_generation list details')
+        text = doc.createTextNode('Local File dictionary with company device_network_generation list details')
         comment.appendChild(text)
         dictionaries.appendChild(comment)
 
