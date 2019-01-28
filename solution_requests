@@ -1,0 +1,25 @@
+import requests
+import re
+A = input().strip()
+B = input().strip()
+q = 0
+res_A = requests.get(A)
+res_B = requests.get(B)
+res_A_txt = str(res_A.text)
+res_B_txt = str(res_B.text)
+reg = r"(?<=href\=\")(.*?)(?=\")"
+k = re.findall(reg, res_A_txt)
+for i in k:
+    try:
+        tmp = requests.get(str(i)).text
+        test = re.findall(reg, str(tmp))
+        if str(B) in tmp:
+            q+=1
+        elif str(B) not in tmp:
+            q += 0
+    except:
+        continue
+if q == 0:
+    print('No')
+else:
+    print('Yes')
