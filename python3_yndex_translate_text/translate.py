@@ -54,4 +54,4 @@ t_list = split_text(text_output)
 with open(text_ru, 'w') as f3:
   for i in t_list:
     f3.write(''.join(translate(i)["text"]))
-    f3.write("\n Переведено сервисом «Яндекс.Переводчик»  http://translate.yandex.ru/ \n")
+    f3.write("\n РџРµСЂРµРІРµРґРµРЅРѕ СЃРµСЂРІРёСЃРѕРј В«РЇРЅРґРµРєСЃ.РџРµСЂРµРІРѕРґС‡РёРєВ»  http://translate.yandex.ru/ \n")
