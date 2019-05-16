@@ -1,0 +1,1 @@
+It is program for translate big text with help yandex translate. 
